@@ -16,6 +16,8 @@ func NewRateLimitWithAlgorithm(limit int, algorithm string, opts ...Option) Rate
 	switch algorithm {
 	case "token_bucket":
 		return NewTokenBucket(limit, opts...)
+	case "leaky_bucket":
+		return NewLeakyBucket(limit, opts...)
 	}
 	return nil
 }

@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func TestRateLimiter(t *testing.T) {
+func TestTokenBucketRateLimiter(t *testing.T) {
 	// 10 concurrent and QPS is 1000
 	concurrent := 10
 	qps := 1000
